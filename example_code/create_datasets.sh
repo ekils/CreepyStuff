@@ -1,5 +1,5 @@
 # Only need to set this path: 
-export DATAPATH='/Users/datanny/Desktop/example_code/'
+export DATAPATH='/your/path/of/convert/codes/'
 
 # Copy source data to step1: 
 cp -a $DATAPATH'src_data/.' './step1_data'
