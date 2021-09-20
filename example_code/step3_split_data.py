@@ -67,15 +67,15 @@ for count_down in range(total_round):
             shutil.copy2(src_path + 'gt/' + name, dst_train_gt)
         for name in test_img:
             shutil.copy2(src_path + 'img/' + name, dst_test_img)
-        for name in train_gt:
+        for name in test_gt:
             shutil.copy2(src_path + 'gt/' + name, dst_test_gt)
             
         if len(train_img) == len(train_gt):
             with open(train_txt_path, 'w') as f:
                 for i in range(len(train_img)):
                     if not train_img[i].startswith('.') and not train_gt[i].startswith('.'):
-                        f.write(dst_path + 'img/' + train_img[i]+ ' ')
-                        f.write(dst_path + 'gt/' + train_gt[i]+ '\n')
+                        f.write(dst_path + 'train/img/' + train_img[i]+ ' ')
+                        f.write(dst_path + 'train/gt/' + train_gt[i]+ '\n')
         else: 
             print('[Train]image and ground truth quantity not match!')
 
@@ -84,8 +84,8 @@ for count_down in range(total_round):
             with open(test_txt_path, 'w') as f:
                 for i in range(len(test_img)):
                     if not test_img[i].startswith('.') and not test_gt[i].startswith('.'):
-                        f.write(dst_path + 'img/' + test_img[i]+ ' ')
-                        f.write(dst_path + 'gt/' + test_gt[i]+ '\n')
+                        f.write(dst_path + 'test/img/' + test_img[i]+ ' ')
+                        f.write(dst_path + 'test/gt/' + test_gt[i]+ '\n')
         else: 
             print('[Test] image and ground truth quantity not match!')
 

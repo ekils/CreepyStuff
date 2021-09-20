@@ -3,7 +3,7 @@
 ### 1. (需手動設定) 先設定檔案資料夾路徑: 
 * 此資料夾為執行轉檔的程式碼資料夾
 
-        export DATAPATH='/your/path/of/convert/codes/'
+        export DATAPATH='./'
 
 </br>
 

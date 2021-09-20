@@ -75,7 +75,8 @@ def xml2txt(filefolder, xml_2_txt_folder):
 
             f=open(xml_2_txt_folder + '/' + file_name + '.txt', "w")
             for line in obj_list:
-                q = ', '.join(map(str, line))
+                q = ','.join(map(str, line))
+                q += ',0' # label 0 
                 _ = f.write(q)
                 _ = f.write('\n')#換行 
             f.close()
