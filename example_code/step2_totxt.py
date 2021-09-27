@@ -101,9 +101,9 @@ def get_image(imagefolder, filefolder2):
         _ = os.makedirs(filefolder2)
     for match in matchs:
         try:
-            _ = shutil.copyfile(imagefolder+ '/' + match + '.jpg', filefolder2 + '/' + match + '.png')
+            _ = shutil.copyfile(imagefolder+ '/' + match + '.jpg', filefolder2 + '/' + match + '.jpg')
         except:
-            _ = shutil.copyfile(imagefolder + '/' + match + '.png', filefolder2 + '/' + match + '.png')
+            _ = shutil.copyfile(imagefolder + '/' + match + '.png', filefolder2 + '/' + match + '.jpg')
     return 
 
 
